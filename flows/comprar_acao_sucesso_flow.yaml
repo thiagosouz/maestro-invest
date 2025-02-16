@@ -1,0 +1,29 @@
+appId: com.example.stock_app
+---
+- launchApp
+- runFlow:
+    file: ../pages/cadastro_page.yaml
+    env:
+      usuario: "qa@endtoend8.com"
+      senha: "Teste@123"
+- back
+- runFlow:
+    file: ../pages/login_page.yaml
+    env:
+      usuario: "qa@endtoend8.com"
+      senha: "Teste@123"
+- runFlow:
+    file: ../pages/home_page.yaml    
+- runFlow:
+    file: ../pages/select_stock_page.yaml
+- runFlow:
+    file: ../pages/quantity_page.yaml
+    env:
+      quantidade: "1"
+- runFlow:
+    file: ../pages/confirmation_page.yaml
+- back
+- assertVisible:
+    text: "Saldo: $99784.10" 
+- runFlow:
+    file: ../pages/minhas_ordens.yaml

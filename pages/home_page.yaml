@@ -1,0 +1,7 @@
+appId: com.example.stock_app
+---
+- tapOn:
+    text: "Comprar Ações"
+   
+
+

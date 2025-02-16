@@ -1,0 +1,6 @@
+appId: com.example.stock_app
+---
+- tapOn:
+    text: "Consultar Ordens"
+- assertVisible:
+    text: "Minhas Ordens"

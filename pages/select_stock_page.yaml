@@ -1,0 +1,8 @@
+appId: com.example.stock_app
+---
+- tapOn:
+    text: "Select Stock"
+- tapOn:
+    text: "Tesla Inc. (TSLA)"
+
+

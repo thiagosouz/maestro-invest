@@ -1,0 +1,8 @@
+appId: com.example.stock_app
+---
+- tapOn: "Cadastrar"
+- tapOn: "Usuário"
+- inputText: ${usuario}
+- tapOn: "Senha"
+- inputText: ${senha}
+- tapOn: "Cadastrar"

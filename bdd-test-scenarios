@@ -1,0 +1,125 @@
+Funcionalidade: Cadastro de Usuário
+  Como um novo usuário
+  Quero me cadastrar na plataforma
+  Para poder acessar os serviços disponíveis
+
+  Cenário: Cadastro de um novo usuário com sucesso
+    Dado que o usuário acessa a página de cadastro
+    Quando ele preenche o email válido e senha contendo pelo menos uma letra maiúscula e um caractere especial
+    E clica no botão "Cadastrar"
+    Então ele deve ser redirecionado para a home do aplicativo
+    E ter a opção de realizar login
+
+  Cenário: Tentativa de cadastro com email inválido
+    Dado que o usuário acessa a página de cadastro
+    Quando ele preenche o campo de email com um formato inválido
+    E clica no botão "Cadastrar"
+    Então ele deve ver a mensagem de erro "Falha ao Cadastrar"
+
+  Cenário: Tentativa de cadastro com senha curta
+    Dado que o usuário acessa a página de cadastro
+    Quando ele preenche o campo de senha com menos de 6 caracteres
+    E clica no botão "Cadastrar"
+    Então ele deve ver a mensagem de erro "Falha ao Cadastrar"
+
+  Cenário: Tentativa de cadastro com senha sem letra maiúscula
+    Dado que o usuário acessa a página de cadastro
+    Quando ele preenche o campo de senha sem nenhuma letra maiúscula
+    E clica no botão "Cadastrar"
+    Então ele deve ver a mensagem de erro "Falha ao Cadastrar"
+
+  Cenário: Tentativa de cadastro com senha sem caractere especial
+    Dado que o usuário acessa a página de cadastro
+    Quando ele preenche o campo de senha sem nenhum caractere especial
+    E clica no botão "Cadastrar"
+    Então ele deve ver a mensagem de erro "Falha ao Cadastrar"
+
+  Cenário: Tentativa de cadastro com email já existente
+    Dado que o usuário acessa a página de cadastro
+    Quando ele preenche o email já cadastrado no sistema
+    E clica no botão "Cadastrar"
+    Então ele deve ver a mensagem de erro "Falha ao Cadastrar"
+
+Funcionalidade: Login
+  Como um usuário registrado
+  Quero fazer login na plataforma
+  Para poder acessar minha conta e utilizar os serviços
+
+  Cenário: Login com email e senha válidos
+    Dado que o usuário acessa a página de login
+    Quando ele preenche o campo de email com um email válido
+    E preenche o campo de senha com a senha correta
+    E clica no botão "Entrar"
+    Então ele deve ser redirecionado para o dashboard
+
+  Cenário: Login com email inválido
+    Dado que o usuário acessa a página de login
+    Quando ele preenche o campo de email com um email inválido
+    E preenche o campo de senha com a senha correta
+    E clica no botão "Entrar"
+    Então ele NÃO deve ser redirecionado para o dashboard
+
+  Cenário: Login com senha incorreta
+    Dado que o usuário acessa a página de login
+    Quando ele preenche o campo de email com um email válido
+    E preenche o campo de senha com uma senha incorreta
+    E clica no botão "Entrar"
+    Então ele NÃO deve ser redirecionado para o dashboard
+
+  Cenário: Login com campos em branco
+    Dado que o usuário acessa a página de login
+    Quando ele deixa os campos de email e senha em branco
+    E clica no botão "Entrar"
+    Então ele NÃO deve ser redirecionado para o dashboard
+
+  Cenário: Login com email não registrado
+    Dado que o usuário acessa a página de login
+    Quando ele preenche o campo de email com um email não registrado
+    E preenche o campo de senha com qualquer senha
+    E clica no botão "Entrar"
+    Então ele NÃO deve ser redirecionado para o dashboard
+
+  Cenário: Login com senha vazia
+    Dado que o usuário acessa a página de login
+    Quando ele preenche o campo de email com um email válido
+    E deixa o campo de senha em branco
+    E clica no botão "Entrar"
+    Então ele NÃO deve ser redirecionado para o dashboard
+
+Funcionalidade: Compra de Ações
+  Como um usuário da plataforma
+  Quero comprar ações
+  Para investir e aumentar meu patrimônio
+
+  Cenário: Compra de ação com saldo suficiente
+    Dado que o usuário está logado na plataforma
+    E possui saldo suficiente na conta
+    Quando ele seleciona uma ação na lista
+    E informa a quantidade desejada
+    E clica no botão "Comprar"
+    Então a compra deve ser concluída com sucesso
+    E a ação deve ser listada na carteira do usuário
+    E o saldo deve ser atualizado corretamente
+
+  Cenário: Tentativa de compra de ação sem saldo suficiente
+    Dado que o usuário está logado na plataforma
+    E possui saldo menor que o valor total da compra
+    Quando ele tenta comprar ações além do seu saldo disponível
+    Então a compra não deve ser realizada
+    E ele deve ver a mensagem de erro
+
+  Cenário: Tentativa de compra sem informar a quantidade
+    Dado que o usuário selecionou uma ação para compra
+    Quando ele não informa a quantidade desejada
+    Então o botão "Comprar" deve permanecer desabilitado
+
+  Cenário: Tentativa de compra informando quantidade sem selecionar ação
+    Dado que o usuário informou a quantidade de ações desejada
+    Quando ele não seleciona nenhuma ação na lista
+    Então o botão "Comprar" deve permanecer desabilitado
+
+  Cenário: Tentativa de compra sem preencher os campos obrigatórios
+    Dado que o usuário acessa a tela de compra de ações
+    Quando ele não seleciona uma ação e não informa a quantidade
+    Então o botão "Comprar" deve permanecer desabilitado
+

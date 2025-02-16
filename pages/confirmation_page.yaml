@@ -1,0 +1,8 @@
+appId: com.example.stock_app
+---
+- assertVisible:
+    text: "Total Order Value: $215.90"
+- assertVisible:
+    text: "Purchase Successful"
+
+

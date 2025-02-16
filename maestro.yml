@@ -1,0 +1,9 @@
+default:
+  timeout: 60000
+  retries: 3
+
+device:
+  platform: android
+  device_id: emulator-5554
+  app_package: com.example.stock_app
+  app_activity: com.example.stock_app/.MainActivity

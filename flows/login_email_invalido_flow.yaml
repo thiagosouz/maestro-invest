@@ -1,0 +1,10 @@
+appId: com.example.stock_app
+---
+- launchApp
+- runFlow:
+    file: ../pages/login_page.yaml
+    env:
+      usuario: "11111"
+      senha: "Teste@123"
+- assertNotVisible:
+    text: "Home" 
