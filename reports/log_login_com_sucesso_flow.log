@@ -1,0 +1,12 @@
+Running on emulator-5554
+ > Flow login_com_sucesso_flow
+Launch app "com.example.stock_app"...Run ../pages/login_page.yaml...
+Run ../pages/login_page.yaml...
+  Tap on "Fazer Login"... COMPLETED
+  Tap on "Usuário"... COMPLETED
+  Input text ${usuario}... COMPLETED
+  Tap on "Senha"... COMPLETED
+  Input text ${senha}... COMPLETED
+  Tap on "Entrar"...Run ../pages/login_page.yaml... RUNNING
+Run ../pages/login_page.yaml... RUNNING
+Assert that "Home" is visible... COMPLETED

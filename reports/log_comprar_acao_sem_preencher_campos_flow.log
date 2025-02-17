@@ -1,0 +1,15 @@
+Running on emulator-5554
+ > Flow comprar_acao_sem_preencher_campos_flow
+Launch app "com.example.stock_app"...Run ../pages/login_page.yaml...
+Run ../pages/login_page.yaml...
+  Tap on "Fazer Login"... COMPLETED
+  Tap on "Usuário"... COMPLETED
+  Input text ${usuario}... COMPLETED
+  Tap on "Senha"... COMPLETED
+  Input text ${senha}... COMPLETED
+  Tap on "Entrar"...Run ../pages/login_page.yaml... RUNNING
+Run ../pages/home_page.yaml...
+Run ../pages/home_page.yaml...
+  Tap on "Comprar Ações"...Run ../pages/home_page.yaml... RUNNING
+Run ../pages/home_page.yaml... RUNNING
+Assert that "Buy Stock" is visible... COMPLETED

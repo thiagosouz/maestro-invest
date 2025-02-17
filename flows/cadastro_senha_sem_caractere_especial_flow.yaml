@@ -4,7 +4,7 @@ appId: com.example.stock_app
 - runFlow:
     file: ../pages/cadastro_page.yaml
     env:
-      usuario: "qa@senhasemcaractere1.com"
+      usuario: "qa@senhasemcaractere4.com"
       senha: "teste123"
 - assertVisible:
     text: "Falha ao Cadastrar"

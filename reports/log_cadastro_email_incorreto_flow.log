@@ -1,0 +1,18 @@
+Running on emulator-5554
+ > Flow cadastro_email_incorreto_flow
+Launch app "com.example.stock_app"...Run ../pages/cadastro_page.yaml...
+Run ../pages/cadastro_page.yaml...
+  Tap on "Cadastrar"... COMPLETED
+  Tap on "Usuário"... COMPLETED
+  Input text ${usuario}... COMPLETED
+  Tap on "Senha"... COMPLETED
+  Input text ${senha}... COMPLETED
+  Tap on "Cadastrar"...Run ../pages/cadastro_page.yaml... RUNNING
+Run ../pages/cadastro_page.yaml... RUNNING
+Assert that "Falha ao Cadastrar" is visible... FAILED
+
+Assertion is false: "Falha ao Cadastrar" is visible
+
+==== Debug output (logs & screenshots) ====
+
+C:\Users\thiag\.maestro\tests\2025-02-16_210423
