@@ -9,10 +9,4 @@ Run ../pages/cadastro_page.yaml...
   Input text ${senha}... COMPLETED
   Tap on "Cadastrar"...Run ../pages/cadastro_page.yaml... RUNNING
 Run ../pages/cadastro_page.yaml... RUNNING
-Assert that "Falha ao Cadastrar" is visible... FAILED
-
-Assertion is false: "Falha ao Cadastrar" is visible
-
-==== Debug output (logs & screenshots) ====
-
-C:\Users\thiag\.maestro\tests\2025-02-16_210328
+Assert that "Falha ao Cadastrar" is visible... COMPLETED

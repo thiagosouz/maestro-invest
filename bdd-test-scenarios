@@ -5,14 +5,14 @@ Funcionalidade: Cadastro de Usuário
 
   Cenário: Cadastro de um novo usuário com sucesso
     Dado que o usuário acessa a página de cadastro
-    Quando ele preenche o email válido e senha contendo pelo menos uma letra maiúscula e um caractere especial
+    Quando ele preenche o email/CPF válido e senha contendo pelo menos uma letra maiúscula e um caractere especial
     E clica no botão "Cadastrar"
     Então ele deve ser redirecionado para a home do aplicativo
     E ter a opção de realizar login
 
-  Cenário: Tentativa de cadastro com email inválido
+  Cenário: Tentativa de cadastro com usuário inválido
     Dado que o usuário acessa a página de cadastro
-    Quando ele preenche o campo de email com um formato inválido
+    Quando ele preenche o campo de email/CPF com um formato inválido
     E clica no botão "Cadastrar"
     Então ele deve ver a mensagem de erro "Falha ao Cadastrar"
 
@@ -34,9 +34,9 @@ Funcionalidade: Cadastro de Usuário
     E clica no botão "Cadastrar"
     Então ele deve ver a mensagem de erro "Falha ao Cadastrar"
 
-  Cenário: Tentativa de cadastro com email já existente
+  Cenário: Tentativa de cadastro com usuário já existente
     Dado que o usuário acessa a página de cadastro
-    Quando ele preenche o email já cadastrado no sistema
+    Quando ele preenche o email/CPF já cadastrado no sistema
     E clica no botão "Cadastrar"
     Então ele deve ver a mensagem de erro "Falha ao Cadastrar"
 
@@ -45,43 +45,43 @@ Funcionalidade: Login
   Quero fazer login na plataforma
   Para poder acessar minha conta e utilizar os serviços
 
-  Cenário: Login com email e senha válidos
+  Cenário: Login com usuário e senha válidos
     Dado que o usuário acessa a página de login
-    Quando ele preenche o campo de email com um email válido
+    Quando ele preenche o campo de usuário com um email/CPF válido
     E preenche o campo de senha com a senha correta
     E clica no botão "Entrar"
     Então ele deve ser redirecionado para o dashboard
 
-  Cenário: Login com email inválido
+  Cenário: Login com usuário inválido
     Dado que o usuário acessa a página de login
-    Quando ele preenche o campo de email com um email inválido
+    Quando ele preenche o campo de usuário com um email/CPF inválido
     E preenche o campo de senha com a senha correta
     E clica no botão "Entrar"
     Então ele NÃO deve ser redirecionado para o dashboard
 
   Cenário: Login com senha incorreta
     Dado que o usuário acessa a página de login
-    Quando ele preenche o campo de email com um email válido
+    Quando ele preenche o campo de usuário com um email/CPF válido
     E preenche o campo de senha com uma senha incorreta
     E clica no botão "Entrar"
     Então ele NÃO deve ser redirecionado para o dashboard
 
   Cenário: Login com campos em branco
     Dado que o usuário acessa a página de login
-    Quando ele deixa os campos de email e senha em branco
+    Quando ele deixa os campos de usuário e senha em branco
     E clica no botão "Entrar"
     Então ele NÃO deve ser redirecionado para o dashboard
 
-  Cenário: Login com email não registrado
+  Cenário: Login com usuário não registrado
     Dado que o usuário acessa a página de login
-    Quando ele preenche o campo de email com um email não registrado
+    Quando ele preenche o campo de usuário com um email/CPF não registrado
     E preenche o campo de senha com qualquer senha
     E clica no botão "Entrar"
     Então ele NÃO deve ser redirecionado para o dashboard
 
   Cenário: Login com senha vazia
     Dado que o usuário acessa a página de login
-    Quando ele preenche o campo de email com um email válido
+    Quando ele preenche o campo de usuário com um email/CPF válido
     E deixa o campo de senha em branco
     E clica no botão "Entrar"
     Então ele NÃO deve ser redirecionado para o dashboard
